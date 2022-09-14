@@ -29,7 +29,8 @@ vim.cmd [[
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
 
-  autocmd VimEnter * hi Normal ctermbg=none 
+  autocmd VimEnter * hi Normal ctermbg=none
+  autocmd BufWinEnter :NvimTreeRefresh<CR>
 ]]
 
 
