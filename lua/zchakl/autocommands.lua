@@ -31,6 +31,11 @@ vim.cmd [[
 
   autocmd VimEnter * hi Normal ctermbg=none
   autocmd BufEnter NERD_tree_* | execute 'normal R'
+
+  augroup _lsp
+    autocmd!
+    autocmd BufWritePre * lua vim.lsp.buf.formatting()
+  augroup end
 ]]
 
 
