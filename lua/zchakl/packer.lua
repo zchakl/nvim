@@ -36,6 +36,10 @@ packer.init {
       return require("packer.util").float { border = "rounded" }
     end,
   },
+  profile = {
+    enable = true,
+    threshold = 1, -- integer in milliseconds, plugins which load faster than this won't be shown in profile output
+  },
 }
 
 -- Install your plugins here
@@ -101,9 +105,9 @@ return packer.startup(function(use)
     requires = 'nvim-lua/plenary.nvim',
   }
   -- Colorschemes
-  use "lunarvim/darkplus.nvim"
-  use "ellisonleao/gruvbox.nvim"
-  use "xiyaowong/nvim-transparent"
+  --use "lunarvim/darkplus.nvim"
+  --use "ellisonleao/gruvbox.nvim"
+  --use "xiyaowong/nvim-transparent"
   use "folke/tokyonight.nvim"
 
   -- cmp plugins
@@ -140,7 +144,7 @@ return packer.startup(function(use)
   use "jlcrochet/vim-razor"
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use {"nvim-telescope/telescope.nvim", cmd='Telescope'}
 
   -- Treesitter
   use {
