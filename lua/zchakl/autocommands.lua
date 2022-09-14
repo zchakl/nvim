@@ -30,7 +30,7 @@ vim.cmd [[
   augroup end
 
   autocmd VimEnter * hi Normal ctermbg=none
-  autocmd WinLeave :NvimTreeRefresh<CR>
+  autocmd BufEnter NERD_tree_* | execute 'normal R'
 ]]
 
 
