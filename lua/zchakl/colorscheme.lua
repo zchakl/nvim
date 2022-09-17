@@ -20,8 +20,8 @@ vim.g.tokyonight_style = 'night'
 
 
 
-require("transparent").setup({
-  enable = false
-})
+--require("transparent").setup({
+--  enable = false
+--})
 
 
