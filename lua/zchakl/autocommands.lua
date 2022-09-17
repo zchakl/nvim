@@ -34,6 +34,9 @@ vim.cmd([[
     autocmd BufWinEnter * :echom "Yes"
   augroup end
 
+  augroup _background
+  augroup end
+
   autocmd VimEnter * hi Normal ctermbg=none
 ]])
 
