@@ -30,7 +30,7 @@ vim.cmd([[
   augroup end
 
   augroup _nvimtree
-    autocmd BufWinEnter * :NvimTreeRefresh<CR>
+    autocmd BufWinEnter * :NvimTreeRefresh
     autocmd BufWinEnter * :echom "Yes"
   augroup end
 
