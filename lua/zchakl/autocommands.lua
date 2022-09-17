@@ -31,7 +31,6 @@ vim.cmd([[
 
   augroup _nvimtree
     autocmd BufWinEnter * :NvimTreeRefresh
-    autocmd BufWinEnter * :echom "Yes"
   augroup end
 
   augroup _background
