@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
+  },
   ["lsp_extensions.nvim"] = {
     loaded = true,
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim",

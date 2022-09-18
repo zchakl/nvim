@@ -130,6 +130,7 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "nvim-lua/lsp_extensions.nvim"
+  use "lukas-reineke/lsp-format.nvim"
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",

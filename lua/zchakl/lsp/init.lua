@@ -6,7 +6,7 @@ end
 require "zchakl.lsp.lsp-installer"
 require("zchakl.lsp.handlers").setup()
 require "zchakl.lsp.null-ls"
-
+require "zchakl.lsp.lsp-format"
 
 require'lsp_extensions'.inlay_hints{
 	highlight = "Comment",
