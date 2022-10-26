@@ -356,6 +356,11 @@ _G.packer_plugins = {
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/renamer.nvim",
     url = "https://github.com/filipdutescu/renamer.nvim"
   },
+  ["sidebar.nvim"] = {
+    loaded = true,
+    path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/sidebar.nvim",
+    url = "https://github.com/sidebar-nvim/sidebar.nvim"
+  },
   sniprun = {
     loaded = true,
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/sniprun",

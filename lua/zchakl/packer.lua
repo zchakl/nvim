@@ -84,6 +84,7 @@ return packer.startup(function(use)
 	use("preservim/tagbar")
 	use("nyngwang/NeoZoom.lua")
 	use("SmiteshP/nvim-gps")
+	use("sidebar-nvim/sidebar.nvim")
 
 	-- Setup of LSP, DAP, etc
 	use({ "williamboman/mason.nvim" })
