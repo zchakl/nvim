@@ -1,4 +1,4 @@
-local icons = require "zchakl.icons"
+local icons = require("zchakl.icons")
 vim.g.symbols_outline = {
 	highlight_hovered_item = true,
 	show_guides = true,
