@@ -92,8 +92,9 @@ return packer.startup(function(use)
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use({
 		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		ft = "markdown",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
 	})
 
 	use({
