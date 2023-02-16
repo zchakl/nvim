@@ -45,6 +45,7 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
+
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("windwp/nvim-autopairs")
@@ -87,7 +88,35 @@ return packer.startup(function(use)
 	use("sidebar-nvim/sidebar.nvim")
 
 	-- Setup of LSP, DAP, etc
-	use({ "williamboman/mason.nvim" })
+
+	-- LSP
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v1.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ "williamboman/mason.nvim" }, -- Optional
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "hrsh7th/cmp-buffer" }, -- Optional
+			{ "hrsh7th/cmp-path" }, -- Optional
+			{ "saadparwaiz1/cmp_luasnip" }, -- Optional
+			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
+			{ "hrsh7th/cmp-cmdline" },
+			{ "hrsh7th/cmp-emoji" },
+
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "rafamadriz/friendly-snippets" }, -- Optional
+		},
+	})
+
+  use("lukas-reineke/lsp-format.nvim")
+	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use({
@@ -110,26 +139,12 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
 
-	-- cmp plugins
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("saadparwaiz1/cmp_luasnip")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-emoji")
-	use("hrsh7th/cmp-nvim-lua")
-
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
-	-- LSP
-	use("neovim/nvim-lspconfig") -- enable LSP
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
-	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
-	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use("nvim-lua/lsp_extensions.nvim")
+
+  use("nvim-lua/lsp_extensions.nvim")
 	use("lukas-reineke/lsp-format.nvim")
 	use({
 		"folke/trouble.nvim",

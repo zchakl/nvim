@@ -1,17 +1,23 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-	return
-end
+vim.opt.signcolumn = "yes"
 
-require("zchakl.lsp.lsp-installer")
-require("zchakl.lsp.handlers").setup()
-require("zchakl.lsp.null-ls")
-require("zchakl.lsp.lsp-format")
-
-require("lsp_extensions").inlay_hints({
-	highlight = "Comment",
-	prefix = " > ",
-	aligned = false,
-	only_current_line = false,
-	enabled = { "ChainingHint", "TypeHint", "ParameterHint" },
+local lsp = require("lsp-zero").preset({
+	name = "minimal",
+	set_lsp_keymaps = true,
+	manage_nvim_cmp = true,
+	suggest_lsp_servers = true,
 })
+
+-- (Optional) Configure lua language server for neovim
+lsp.nvim_workspace()
+
+lsp.setup()
+
+require("lsp-format").setup {}
+
+local on_attach = function(client)
+    require("lsp-format").on_attach(client)
+
+    -- ... custom code ...
+end
+require("lspconfig").gopls.setup { on_attach = on_attach }
+require("lspconfig").lua_ls.setup { on_attach = on_attach }
