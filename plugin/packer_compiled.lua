@@ -224,11 +224,6 @@ _G.packer_plugins = {
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
     url = "https://github.com/Shatur/neovim-session-manager"
   },
-  ["nlsp-settings.nvim"] = {
-    loaded = true,
-    path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
-    url = "https://github.com/tamago324/nlsp-settings.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -328,6 +323,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/zchakl/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
