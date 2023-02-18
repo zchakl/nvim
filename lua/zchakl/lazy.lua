@@ -91,7 +91,7 @@ require("lazy").setup({
 
 
 
-  { "michaelb/sniprun",build = "bash ./install.sh" },
+  { "michaelb/sniprun",              build = "bash ./install.sh" },
   {
     "iamcco/markdown-preview.nvim",
     run = function()
@@ -110,8 +110,15 @@ require("lazy").setup({
   },
 
   -- Colorschemes
-  "folke/tokyonight.nvim",
-
+  {
+    "folke/tokyonight.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- load the colorscheme here
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  },
   -- snippets
   "L3MON4D3/LuaSnip", --snippet engine
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use

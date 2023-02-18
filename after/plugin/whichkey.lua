@@ -103,12 +103,12 @@ local mappings = {
     p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "goto prev" },
   },
   p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
+    name = "Plugins",
+    c = { "<cmd>Lazy clean<cr>", "Clean" },
+    i = { "<cmd>Lazy install<cr>", "Install" },
+    s = { "<cmd>Lazy sync<cr>", "Sync" },
+    m = { "<cmd>Lazy <cr>", "Menu" },
+    u = { "<cmd>Lazy update<cr>", "Update" },
   },
   r = {
     name = "Replace",
