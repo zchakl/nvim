@@ -15,47 +15,62 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install your plugins here
 require("lazy").setup({
-
+  -- Core Plugins
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
   "windwp/nvim-autopairs",
-  "numToStr/Comment.nvim",
-  "kyazdani42/nvim-web-devicons",
-  "kyazdani42/nvim-tree.lua",
-  "akinsho/bufferline.nvim",
-  "moll/vim-bbye",
-  "nvim-lualine/lualine.nvim",
+  "nvim-tree/nvim-web-devicons",
+  "nvim-tree/nvim-tree.lua",
+  {
+    'akinsho/bufferline.nvim',
+    branch = "v3.*",
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
   "akinsho/toggleterm.nvim",
   "ahmedkhalf/project.nvim",
+  "folke/which-key.nvim",
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = 'nvim-lua/plenary.nvim',
+  },
+  --"preservim/tagbar",
+  "sidebar-nvim/sidebar.nvim",
+  {
+    "goolord/alpha-nvim",
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+  },
+  "rcarriga/nvim-notify",
+
+  -- Not Core but not useless Plugins
+  "numToStr/Comment.nvim",
+  "ojroques/nvim-bufdel",
   "lewis6991/impatient.nvim",
   "lukas-reineke/indent-blankline.nvim",
-  "goolord/alpha-nvim",
-  "antoinemadec/FixCursorHold.nvim",
-  "folke/which-key.nvim",
-  "unblevable/quick-scope",
-  "phaazon/hop.nvim",
-  "andymass/vim-matchup",
+  "phaazon/hop.nvim", --TODO set up hop
   "nacro90/numb.nvim",
   "monaqa/dial.nvim",
   "norcalli/nvim-colorizer.lua",
-  "windwp/nvim-spectre",
-  "windwp/nvim-ts-autotag",
+  {
+    "windwp/nvim-spectre",
+    dependencies = "nvim-lua/plenary.nvim",
+  },
   "folke/zen-mode.nvim",
   "karb94/neoscroll.nvim",
-  "folke/todo-comments.nvim",
   "kevinhwang91/nvim-bqf",
-  "ThePrimeagen/harpoon",
-  "MattesGroeger/vim-bookmarks",
-  "lunarvim/vim-solidity",
   "Mephistophiles/surround.nvim",
-  "tpope/vim-repeat",
-  "Shatur/neovim-session-manager",
-  "rcarriga/nvim-notify",
-  "tversteeg/registers.nvim",
-  "preservim/tagbar",
-  "nyngwang/NeoZoom.lua",
-  "SmiteshP/nvim-gps",
-  "sidebar-nvim/sidebar.nvim",
+  {
+    "Shatur/neovim-session-manager",
+    dependencies = "nvim-lua/plenary.nvim",
+  },
+
 
   -- Setup of LSP, DAP, etc
 
@@ -126,7 +141,7 @@ require("lazy").setup({
 
   {
     "folke/trouble.nvim",
-    dependencies = "kyazdani42/nvim-web-devicons",
+    dependencies = "nvim-tree/nvim-web-devicons",
   },
 
   -- Telescope
@@ -140,6 +155,8 @@ require("lazy").setup({
   "nvim-treesitter/nvim-treesitter-context",
   "JoosepAlviste/nvim-ts-context-commentstring",
   "nvim-treesitter/playground",
+  "windwp/nvim-ts-autotag",
+
   -- Git
   "lewis6991/gitsigns.nvim",
 
