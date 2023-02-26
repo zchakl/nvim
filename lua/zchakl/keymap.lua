@@ -30,9 +30,6 @@ keymap("n", "<S-Down>", ":m+<CR>", opts)
 keymap("i", "<S-Up>", "<Esc>:m-2<CR>", opts)
 keymap("i", "<S-Down>", "<Esc>:m+<CR>", opts)
 
-keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("i", "<C-u>", "<C-u>zz", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
