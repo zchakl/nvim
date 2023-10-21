@@ -23,7 +23,6 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     {
         'akinsho/bufferline.nvim',
-        branch = "v3.*",
         dependencies = 'nvim-tree/nvim-web-devicons',
     },
     {
