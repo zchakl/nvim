@@ -1,2 +1,2 @@
--- This is my Neovim config please enjoy, new linux new me
+-- This is my Neovim config please enjoy
 require("zchakl")
